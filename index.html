@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Удочка</title>
+    <link rel="stylesheet" href="assets/css/bootstrap.css">
+    <link rel="stylesheet" href="assets/css/bootstrap-icons.css">
+</head>
+
+<body>
+
+    <nav class="navbar navbar-expand-lg bg-body-tertiary">
+        <div class="container-fluid">
+            <a class="navbar-brand" href="#">Супер Удочка</a>
+        </div>
+    </nav>
+
+    <div class="container my-4">
+        <div class="card">
+            <div class="card-header">
+                <h4 class="card-title">Управление</h4>
+            </div>
+            <div class="card-body">
+                <div class="row">
+                    <div class="col">
+                        <h3>Мониторинг</h3>
+                        <h2 id="monitoring_status">Отключен</h2>
+                        <h3 id="percentage"></h3>
+                        <button class="btn btn-success" id="monitoring" value="off">Включить</button>
+                        <button class="btn btn-danger" id="change" data-val="1">Поменять процент</button>
+                    </div>
+                    <div class="col">
+                        <h3>Cправочная информация</h3>
+                        <h4>counter: <span id="timer"></span></h4>
+                        <h4>difference: <span id="difference"></span></h4>
+                        <h4>message: <span id="message"></span></h4>
+                        <h4>Статистика (последние 50 сделок)</h4>
+                        <ul class="list-group">
+                            <li class="list-group-item">Удачных сделок (2%): <span id="successes"></span></li>
+                            <li class="list-group-item">Неудачных сделок (0.1%): <span id="faileses"></span></li>
+                        </ul>
+                    </div>
+                </div>
+
+            </div>
+            <div class="card-footer">
+                <button id="turbo" class="btn btn-warning w-100" data-val="1">Turbo OFF</button>
+                <div id="turbo_status" class="spinner-border" role="status">
+                    <span class="visually-hidden">Loading...</span>
+                </div>
+            </div>
+        </div>
+        <div class="card my-4">
+            <div class="card-header">
+                <h4 class="card-title">Таблица</h4>
+                <div class="spinner-border" id="monitoring_spinner" role="status">
+                    <span class="visually-hidden">Loading...</span>
+                </div>
+            </div>
+            <div class="card-body">
+                <table class="table table-responsive" style="font-size: 12px;">
+                    <thead>
+                        <th>ID</th>
+                        <th>Имя</th>
+                        <th>Сумма</th>
+                        <th>Ставка</th>
+                        <th>Время</th>
+                    </thead>
+                    <tbody id="test1">
+
+                    </tbody>
+                </table>
+            </div>
+        </div>
+    </div>
+
+    <script src="assets/js/bootstrap.bundle.js"></script>
+    <script src="assets/scripts/jquery.js"></script>
+    <script src="assets/scripts/ttt.js"></script>
+</body>
+
+</html>
