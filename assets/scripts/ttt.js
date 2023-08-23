@@ -248,7 +248,7 @@ function turboChange() {
 
 
                 // 2 * 15 = 30 типо чувствует пока так потом надо какую-то формулу на случайное число что ли хз
-                if (counter == 2 * maxCounter) {
+                if (counter == 4 * maxCounter) {
                     turboLog("#message", "Нет пока сделок. Но скоро будет.");
                     changePercentage();
                     counter = 0;
